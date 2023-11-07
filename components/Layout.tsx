@@ -11,7 +11,7 @@ export interface LayoutProps {
 }
 
 function Layout(props: LayoutProps): JSX.Element {
-  const title = props.title ?? 'efas 🦍';
+  const title = props.title ?? 'efas 🍄';
   const description = props.description ?? 'a guttural experience';
   return (
     <div id="root">
@@ -29,6 +29,12 @@ function Layout(props: LayoutProps): JSX.Element {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
+
+        <link rel="preload" href="/fonts/PPNeueMontreal-Bold.otf" as="font" crossOrigin="" />
+        <link rel="preload" href="/fonts/Bodoni/Bodoni.woff" as="font" crossOrigin="" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
 
         <title>{title}</title>
       </Head>
