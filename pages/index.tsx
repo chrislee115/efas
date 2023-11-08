@@ -27,7 +27,7 @@ export default function Home(): JSX.Element {
         EFAS.
       </h1>
       <div id={styles.mushroom}>
-        mushroom goes here
+        <img src={'images/neon_shroom.svg'}/>
       </div>
       <div id={styles.menu}>
         {Object.entries(MENU_ITEMS).map(([sectionTitle, items]) => {
