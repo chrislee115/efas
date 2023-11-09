@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.scss';
 
@@ -21,13 +21,21 @@ const MENU_ITEMS: TMenu = {
 };
 
 export default function Home(): JSX.Element {
+
+  const [imgSrc, setImgSrc] = useState('gifs/light_up_shroom.gif');
+  useEffect(() => {
+    setTimeout(() => {
+      setImgSrc('gifs/pulsating_shroom.gif');
+    }, 1500);
+  }, []);
+
   return (
     <Layout id={styles.container}>
       <h1 id={styles.title}>
         EFAS.
       </h1>
       <div id={styles.mushroom}>
-        <img src={'images/neon_shroom.svg'}/>
+        <img src={imgSrc}/>
       </div>
       <div id={styles.menu}>
         {Object.entries(MENU_ITEMS).map(([sectionTitle, items]) => {

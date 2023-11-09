@@ -5,7 +5,7 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 
 #title {
@@ -13,12 +13,12 @@
 }
 
 #mushroom {
-  margin: 16px 0;
+  margin: 0;
   align-items: center;
   flex-direction: center;
 
   img {
-    width: 180px;
+    width: 240px;
   }
 }
 
